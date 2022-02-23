@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://github.com/Etracih/qr-code-component/blob/main/src/images/nft-preview-card-component.png?raw=true)
+![](https://github.com/Etracih/nft-preview-card-component/blob/main/src/images/nft-preview-card-component.png?raw=true)
 
 ### Links
 
