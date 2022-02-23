@@ -1,0 +1,48 @@
+@use "../util/functions" as f;
+
+/* Set defaults for border and font size */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: var(--font-outfit);
+  font-size: f.rem(18);
+  font-weight: 300;
+  color: var(--softblue);
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove underline for links */
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

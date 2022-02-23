@@ -1,0 +1,82 @@
+@use "../util/functions" as f;
+
+.card {
+  background-color: var(--darkblue_card_bg);
+  width: f.rem(328);
+  padding: f.rem(25);
+  border-radius: f.rem(14);
+  color: var(--softblue);
+
+  &__image {
+    position: relative;
+    width: f.rem(278);
+    margin-bottom: f.rem(23);
+
+    img {
+      border-radius: f.rem(8);
+    }
+    .overlay {
+      background-color: var(--lightcyan);
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      position: absolute;
+      top: 0; // set the overlay position same as image in y axis
+      opacity: 0;
+      transition: opacity ease-in-out 300ms;
+    }
+
+    .overlay:hover {
+      opacity: 1;
+    }
+  }
+  &__header {
+    color: var(--white);
+    font-weight: 600;
+    font-size: f.rem(22);
+    margin-bottom:  f.rem(10);
+  }
+  &__header:hover {
+    color: var(--cyan);
+  }
+  &__paragraph {
+    font-size: medium;
+  }
+
+  &__text {
+    font-size: medium;
+    padding:  f.rem(13) 0 f.rem(13) 0;
+    list-style-type: none;
+    border-bottom: 1px solid var(--darkblue_line);
+
+    li:first-child {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    img {
+      margin-right: 7px;
+    }
+  }
+
+  &__author {
+    font-size: medium;
+    margin-top: f.rem(15);
+
+    &-circle {
+      border-radius: 50%;
+      border: 1px solid var(--white);
+      margin-right: 15px;
+    }
+    img {
+      height: 32px;
+      width: 32px;
+    }
+    span {
+      color: var(--white);
+    }
+    span:hover {
+      color: var(--cyan);
+    }
+  }
+}

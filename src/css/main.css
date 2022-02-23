@@ -1,0 +1,182 @@
+/* Set defaults for border and font size */
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: var(--font-outfit);
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--softblue);
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove underline for links */
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* Colors */
+:root {
+  /* Primary */
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --lightcyan: hsla(178, 100%, 50%, 0.39);
+  /*  Neutral */
+  --darkblue_main_bg: hsl(217, 54%, 11%);
+  --darkblue_card_bg: hsl(216, 50%, 16%);
+  --darkblue_line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Fonts */
+:root {
+  --font-outfit: "Outfit", sans-serif;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.flex-jc-c {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.flex-ai-c {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-c-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cursor-p {
+  cursor: pointer;
+}
+
+main {
+  background-color: var(--darkblue_main_bg);
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--darkblue_card_bg);
+  width: 20.5rem;
+  padding: 1.5625rem;
+  border-radius: 0.875rem;
+  color: var(--softblue);
+}
+.card__image {
+  position: relative;
+  width: 17.375rem;
+  margin-bottom: 1.4375rem;
+}
+.card__image img {
+  border-radius: 0.5rem;
+}
+.card__image .overlay {
+  background-color: var(--lightcyan);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 300ms;
+  transition: opacity ease-in-out 300ms;
+}
+.card__image .overlay:hover {
+  opacity: 1;
+}
+.card__header {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.375rem;
+  margin-bottom: 0.625rem;
+}
+.card__header:hover {
+  color: var(--cyan);
+}
+.card__paragraph {
+  font-size: medium;
+}
+.card__text {
+  font-size: medium;
+  padding: 0.8125rem 0 0.8125rem 0;
+  list-style-type: none;
+  border-bottom: 1px solid var(--darkblue_line);
+}
+.card__text li:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+}
+.card__text img {
+  margin-right: 7px;
+}
+.card__author {
+  font-size: medium;
+  margin-top: 0.9375rem;
+}
+.card__author-circle {
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  margin-right: 15px;
+}
+.card__author img {
+  height: 32px;
+  width: 32px;
+}
+.card__author span {
+  color: var(--white);
+}
+.card__author span:hover {
+  color: var(--cyan);
+}
