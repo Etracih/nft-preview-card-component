@@ -34,7 +34,7 @@
     color: var(--white);
     font-weight: 600;
     font-size: f.rem(22);
-    margin-bottom:  f.rem(10);
+    margin-bottom: f.rem(10);
   }
   &__header:hover {
     color: var(--cyan);
@@ -45,7 +45,7 @@
 
   &__text {
     font-size: medium;
-    padding:  f.rem(13) 0 f.rem(13) 0;
+    padding: f.rem(13) 0 f.rem(13) 0;
     list-style-type: none;
     border-bottom: 1px solid var(--darkblue_line);
 
